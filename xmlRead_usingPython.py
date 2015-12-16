@@ -2,7 +2,7 @@
 #...the module.
 import xml.etree.ElementTree as ET
 
-#sample data as below
+#sample data as below. Use tripple single quotes to define the data.
 data = '''
 <person>
   <name>Chuck</name>
