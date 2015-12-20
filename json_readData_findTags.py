@@ -6,7 +6,10 @@ sum = 0
 url = raw_input("Enter location (url):")
 
 #"data" type would be a string
-data = urllib.urlopen(url).read()
+try : data = urllib.urlopen(url).read()
+except : 
+	print "Improper url. Exiting...."
+	exit()
 
 print "Retrieving", url
 print "Retrieved", len(data), "character"
