@@ -1,6 +1,6 @@
 #use http://python-data.dr-chuck.net/comments_42.json to test. Sum should be 2482.
 #can also use http://python-data.dr-chuck.net/comments_171700.json to test. Sum...
-#...should end with 81.
+#....should end with 81.
 
 import json
 import urllib
