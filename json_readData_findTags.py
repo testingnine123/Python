@@ -1,3 +1,7 @@
+#use http://python-data.dr-chuck.net/comments_42.json to test. Sum should be 2482.
+#can also use http://python-data.dr-chuck.net/comments_171700.json to test. Sum...
+#...should end with 81.
+
 import json
 import urllib
 
@@ -7,7 +11,7 @@ url = raw_input("Enter location (url):")
 
 #"data" type would be a string
 try : data = urllib.urlopen(url).read()
-except : 
+except : data
 	print "Improper url. Exiting...."
 	exit()
 
