@@ -11,7 +11,7 @@ url = raw_input("Enter location (url):")
 
 #"data" type would be a string
 try : data = urllib.urlopen(url).read()
-except : data
+except : 
 	print "Improper url. Exiting...."
 	exit()
 
@@ -20,6 +20,8 @@ print "Retrieved", len(data), "character"
 
 #"jsonData" type would be a dictionary
 jsonData = json.loads(data)
+
+print json.dumps(jsonData, indent = 4)
 
 #print the number of nodes of "comments" tag
 print "Count:",len(jsonData["comments"])
