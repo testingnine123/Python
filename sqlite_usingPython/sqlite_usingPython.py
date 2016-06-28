@@ -44,17 +44,18 @@ for line in fh:
 
     except:
         #if email doesn't exit in table, insert the email, and the count starts from 1
-        cur.execute('''INSERT INTO Counts (email, count) VALUES ( ?, 1 )''', ( email, ) )
+        cur.execute('''INSERT INTO Counts (email, count) VALUES (?, 1 )''', (email, ) )
         
     #commit data in the drive, and not in memory.
     conn.commit()
 
 sqlstr = 'SELECT email, count FROM Counts ORDER BY count DESC LIMIT 10'
 
-'''for row in cur.execute(sqlstr) :
+#just to check and print on the terminal
+for row in cur.execute(sqlstr) :
     #row[0] is email, and row[1] is count. Convert into string...
     #...in case it has any unicode in it.
-    print str(row[0]), row[1]'''
+    print str(row[0]), row[1]
 
 #close the cursor
 cur.close()

@@ -16,7 +16,7 @@ while True:
 
 	print 'Retrieving',url
 	
-	#opel the url and read the data
+	#open the url and read the data
 	data = urllib.urlopen(url).read()
 	
 	print 'Retrived',len(data),'characters'

@@ -11,8 +11,8 @@ input = '''
         <user x="7">
             <id>009</id>
             <name>Brent</name>
-            </user>
-        </users>
+        </user>
+    </users>
 </stuff>'''
 
 #read the XML data

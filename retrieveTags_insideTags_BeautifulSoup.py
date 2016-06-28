@@ -16,10 +16,11 @@ for i in range(inp_count):
 	
 	print 'Retrieving link',i,':',inp_url
 	
-	#soupy the html received
+	#soupify the html received
 	soup = BeautifulSoup(fhand)
 	
-	#find the list of anchor tags and parse the href content in them so that we can parse the next link
+	#find the list of anchor tags and parse the href content in them so that we... 
+	#...can parse the next link
 	tags = soup('a') #tags will be a list
 	
 	#get the href part of the anchor tag along with the contents

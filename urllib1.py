@@ -1,4 +1,4 @@
-#module to convert urls into files We don't need to use "socket" module.
+#module to convert urls into files. We don't need to use "socket" module.
 import urllib
 
 fhand = urllib.urlopen('http://www.py4inf.com/code/romeo.txt')

@@ -11,7 +11,7 @@ conn = sqlite3.connect('musicaldata.sqlite')
 cur = conn.cursor()
 
 #use executescript() to run several queries together
-cur.executescript('''
+cur.executescript ('''
 	DROP TABLE IF EXISTS Artist;
 	DROP TABLE IF EXISTS Genre;
 	DROP TABLE IF EXISTS Album;
@@ -51,10 +51,10 @@ except:
 def lookup(d, attrib):	
 	found = False
 	for child in d:
+		if found: return child.text
 		#look for the "key" tag in the file and then compare the text in it
 		if (child.tag == 'key' and child.text == attrib):
 			found = True
-		if found: return child.text
 	#return None if not found
 	return None
 
